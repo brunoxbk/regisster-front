@@ -24,7 +24,7 @@ const Login = (props) => {
     const onSubmit = (data) => {
         console.log(data);
         setLoading(true);
-        axios.post(`http://${process.env.REACT_APP_HOST}/auth/login/`, data).then(response => {
+        axios.post(`${process.env.REACT_APP_HOST}/auth/login/`, data).then(response => {
             console.log(response);
             setLoading(false);
 

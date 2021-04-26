@@ -29,7 +29,7 @@ const ModalMovement = (props) => {
         console.log(data);
 
         setLoading(true);
-        axios.post(`http://${process.env.REACT_APP_HOST}/cashbook/`, data).then(response => {
+        axios.post(`${process.env.REACT_APP_HOST}/cashbook/`, data).then(response => {
             console.log(response);
             props.getMovements()
             setLoading(false);

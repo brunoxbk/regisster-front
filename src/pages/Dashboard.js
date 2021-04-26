@@ -12,7 +12,7 @@ function Dashboard(props) {
   const [despesas, setDespesas] = useState(0);
 
   const getMovements = () => {
-    axios.get(`http://${process.env.REACT_APP_HOST}/cashbook/`)
+    axios.get(`${process.env.REACT_APP_HOST}/cashbook/`)
       .then((response) => setMovements(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);

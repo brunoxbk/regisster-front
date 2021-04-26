@@ -29,7 +29,7 @@ const Register = (props) => {
     const onSubmit = (data) => {
         console.log(data);
         setLoading(true);
-        axios.post(`http://${process.env.REACT_APP_HOST}/auth/register/`, data).then(response => {
+        axios.post(`${process.env.REACT_APP_HOST}/auth/register/`, data).then(response => {
             setLoading(false);
             //setUserSession(response.data.token, response.data.user);
             props.history.push('/login');
